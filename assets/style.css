@@ -239,7 +239,6 @@ transform: translate(-50%, -50%) scale(1.1);
 /* Section Styling */
 .location-section {
     background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
-    padding: 50px 0;
 }
 
 /* Map Styling */
@@ -247,6 +246,7 @@ transform: translate(-50%, -50%) scale(1.1);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 
 /* Location List Styling */
@@ -255,8 +255,31 @@ transform: translate(-50%, -50%) scale(1.1);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
-
+/* Reset list styles */
+.location-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Align icon and text inline */
+  .location-list ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the check icon */
+  .location-list ul li i.check-icon {
+    margin-right: 10px; /* Space between icon and text */
+    color: #16a085;
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+  }
+  
 /* Icon Style */
 .check-icon {
     color: #2E7D32;
@@ -474,45 +497,46 @@ transform: translate(-50%, -50%) scale(1.1);
     }
   }
 
-  /* mobile */
-     /* Hide the mobile fixed buttons by default */
-     .mobile-fixed-buttons {
-        display: none;
-      }
-      
-      /* Only display on mobile devices */
-      @media (max-width: 768px) {
-        .mobile-fixed-buttons {
-          display: flex;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          background-color: #fff;
-          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-          z-index: 1000;
-        }
-        .mobile-fixed-buttons a {
-          flex: 1;  /* Each button takes 50% of the container's width */
-          text-align: center;
-          padding: 10px 0;
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: bold;
-          color: #fff;
-          display: block;
-          transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        .mobile-fixed-buttons a.call {
-          background-color: #16a085;
-        }
-        .mobile-fixed-buttons a.whatsapp {
-          background-color: #25d366;
-        }
-        /* Hover effect: scale up on hover */
-        .mobile-fixed-buttons a:hover {
-          transform: scale(1.05);
-        }
-      }
+   /* Hide mobile fixed buttons by default */
+   .mobile-fixed-buttons {
+    display: none;
+  }
+  /* Only display on mobile devices */
+  @media (max-width: 768px) {
+    .mobile-fixed-buttons {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .mobile-fixed-buttons a {
+      flex: 1;  /* Each button takes equal space */
+      text-align: center;
+      padding: 10px 0;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      display: block;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .mobile-fixed-buttons a.call {
+      background-color: #16a085;
+    }
+    .mobile-fixed-buttons a.whatsapp {
+      background-color: #25d366;
+    }
+    .mobile-fixed-buttons a.enquiry {
+      background-color: #ff9800;
+    }
+    /* Hover effect for all buttons */
+    .mobile-fixed-buttons a:hover {
+      transform: scale(1.05);
+    }
+  }
 
 
